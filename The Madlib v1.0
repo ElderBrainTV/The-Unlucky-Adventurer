@@ -1,0 +1,52 @@
+a = 1
+while a == 1:
+    name = input ( "Give our character a name!\nType a name: \n" )
+    objects1 = input ( "Name an object?\nType an object: \n" )
+    objects2 = input ( "Name another object!\nType an object: \n" )
+    objects3 = input ( "Name a third object?\nType an object: \n" )
+    objects4 = input ( "Name one last object!\nType an object: \n" )
+    adjectives1 = input ( "Give us an adjective!\nType an adjective: \n" )
+    adjectives2 = input ( "Give us another adjective!\nType an adjective: \n" )
+    adjectives3 = input ( "And another adjective!\nType an adjective: \n" )
+    adjectives4 = input ( "One more adjective, please?\nType an adjective: \n" )
+    verb1 = input ( "How about a verb?\nType a verb: \n" )
+    verb2 = input ( "One more verb, please?\nType a verb: \n" )
+
+    print("The dark "+objects1+" streched on for what seemed like ages. My feet hitting the wet "+objects2+" was a\n "
+        "reminder of reality. My "+objects3+" was nearing the bottom. \"What more will I be forced\n to endure?\" I pondered."
+        " It felt as though the forest was calling me. \""+name+"\", it whispered. With not even a\n trace of a"
+        " "+objects4+" around, my mind was forced to wonder for other means of entertainment. After what felt like\n a mile"
+        " of walking, I finally ended up at a "+adjectives1+" village. At the sight of the first house on\n the corner of "
+        "the village, I felt my body nearly collapse out of relief, and then it did. When I finally came to, I caught\n a "
+        "glimpse of a "+adjectives2+" "+objects4+" looking through my pack. Somehow they had removed it from my back\n and"
+        " were now searching through it. Quickly, I "+verb1+" my belongings\n without so much as a word to the kid. I knew"
+        " he was likely a "+adjectives4+" "+objects4+" around these parts, or perhaps they were a thief-in-training\n and"
+        " I was being too easy on them. His sins weren\'t mine to pass judgement upon, and\n I wasn\'t"
+        " about to "+verb1+" a kid. Out of fear, he "+verb2+" off in a hurry after the encounter.\n\n")
+    playagain = input("Would you like to play again?\nType \"Yes\" or \"No\": ")
+    capplay = playagain.capitalize()
+    print("Great! Let\'s play again!")
+    if capplay == "No":
+        break
+print("Thanks for playing!")
+save = input("Would you like to save your madlib?\nType \"Yes\" or \"No\": ")
+saveproper = save.capitalize()
+if saveproper == "Yes":
+    filename = input("What would you like to save it as?\nType a file name: ")
+    filenametxt = filename + ".txt"
+    file = open(filenametxt,"x")
+    file.write("The dark "+objects1+" streched on for what seemed like ages. My feet hitting the wet "+objects2+" was a\n "
+    "reminder of reality. My "+objects3+" was nearing the bottom. \"What more will I be forced\n to endure?\" I pondered."
+    " It felt as though the forest was calling me. \""+name+"\", it whispered. With not even a\n trace of a"
+    " "+objects4+" around, my mind was forced to wonder for other means of entertainment. After what felt like\n a mile"
+    " of walking, I finally ended up at a "+adjectives1+" village. At the sight of the first house on\n the corner of "
+    "the village, I felt my body nearly collapse out of relief, and then it did. When I finally came to, I caught\n a "
+    "glimpse of a "+adjectives2+" "+objects4+" looking through my pack. Somehow they had removed it from my back\n and"
+    " were now searching through it. Quickly, I "+verb1+" my belongings\n without so much as a word to the kid. I knew"
+    " he was likely a "+adjectives4+" "+objects4+" around these parts, or perhaps they were a thief-in-training\n and"
+    " I was being too easy on them. His sins weren\'t mine to pass judgement upon, and\n I wasn\'t"
+    " about to "+verb1+" a kid. Out of fear, he "+verb2+" off in a hurry after the encounter.")
+    file.close()
+    print ( "See you next time!" )
+elif saveproper == "No":
+    print("See you next time!")
